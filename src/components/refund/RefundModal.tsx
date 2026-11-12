@@ -396,10 +396,6 @@ export function RefundModal({
                       ))}
                     </div>
                   </div>
-
-                  <p className="truncate font-mono text-[11px] text-muted">
-                    Idempotency key: {idempotencyKey}
-                  </p>
                 </div>
               )}
             </div>
