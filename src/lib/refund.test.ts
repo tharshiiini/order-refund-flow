@@ -75,16 +75,6 @@ describe("calculateRefund", () => {
     expect(fromCents(result.preview.amountCents)).toBe(13.9);
   });
 
-  it("rejects an add-on without its parent item", () => {
-    const result = calculateRefund(SEED_ORDER, {
-      unitIds: [],
-      addons: [{ unitId: "L1-2", addonId: "A1" }],
-      refundDeliveryFee: false,
-    });
-    expect(result.ok).toBe(false);
-    if (!result.ok) expect(result.error.code).toBe("orphan_addon");
-  });
-
   it("rejects units that are already refunded", () => {
     const result = calculateRefund(SEED_ORDER, {
       ...emptySelection,

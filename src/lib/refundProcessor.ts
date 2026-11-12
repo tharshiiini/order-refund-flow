@@ -64,7 +64,6 @@ function computeBackoffWithJitter(
   const jitter = Math.floor(Math.random() * (maxJitterMs + 1));
   return exponential + jitter;
 }
-// abort - if you go to diff page / refresh
 
 function sleep(ms: number, signal?: AbortSignal): Promise<void> {
   return new Promise((resolve, reject) => {
