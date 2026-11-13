@@ -3,7 +3,7 @@ import * as ToastPrimitive from "@radix-ui/react-toast";
 // export const ToastProvider = ToastPrimitive.Provider;
 
 export const ToastViewport = () => (
-  <ToastPrimitive.Viewport className="fixed bottom-4 right-4 z-50 flex w-96 max-w-[100vw] flex-col gap-2 outline-none" />
+  <ToastPrimitive.Viewport className="fixed top-4 right-4 z-50 flex w-96 max-w-[100vw] flex-col gap-2 outline-none" />
 );
 
 type ToastProps = Omit<ToastPrimitive.ToastProps, "title" | "content"> & {
